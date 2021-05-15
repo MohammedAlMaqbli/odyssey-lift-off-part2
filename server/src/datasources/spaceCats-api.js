@@ -6,12 +6,11 @@ class SpaceCatsAPI extends RESTDataSource {
     this.baseURL = "https://fake-spacecats-rest-api.cat/";
   }
 
-  getTracksForHome() {
-    return this.get("tracks");
+  getSpaceCats() {
+    return this.get("spacecats");
   }
-
-  getAuthor(authorId) {
-    return this.get(`author/${authorId}`);
+  getMissions(catId) {
+    return this.get(`spacecats/${catId}/missions`);
   }
 }
 export default SpaceCatsAPI;
