@@ -1,4 +1,4 @@
-import { RESTDataSource } from "apollo-datasource-rest";
+const { RESTDataSource } = require("apollo-datasource-rest");
 
 class SpaceCatsAPI extends RESTDataSource {
   constructor() {
@@ -13,4 +13,4 @@ class SpaceCatsAPI extends RESTDataSource {
     return this.get(`spacecats/${catId}/missions`);
   }
 }
-export default SpaceCatsAPI;
+module.exports = SpaceCatsAPI;
